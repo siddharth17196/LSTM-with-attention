@@ -5,7 +5,7 @@ DEFINATION OF MODELS FOR
 
 USGAE  - CALL CHOOSE_MODEL (RETURNS THE CHOSEN MODEL ARCHITECTURE)
 '''
-
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 class LSTMAttentionModel(nn.Module):
 	def __init__(self, batch_size, output_size, hidden_size, vocab_size, embedding_length, n_layers, drop_prob=0.5):
